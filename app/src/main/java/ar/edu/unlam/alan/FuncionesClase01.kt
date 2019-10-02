@@ -1,7 +1,7 @@
 package ar.edu.unlam.alan
 
 /*Funcion sumar*/
-
+/*
 fun Sum(a:int, b:int):int{
     return a+b
 }

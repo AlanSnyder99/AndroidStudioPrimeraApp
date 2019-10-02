@@ -7,28 +7,362 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <LinearLayout
+    <LinearLayout android:id="@+id/header"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="70dp"
         android:background="#FFEB3B">
 
         <ImageView
-            android:layout_width="42dp"
-            android:layout_height="43dp"
-            android:layout_marginTop="15dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="20dp"
             android:layout_marginLeft="12dp"
             android:src="@drawable/menu">
 
         </ImageView>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Producto"
-        android:textSize="20dp"/>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Producto"
+            android:textSize="20dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginLeft="30dp"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginLeft="110dp"
+            android:src="@drawable/like"/>
+        <ImageView
+            android:layout_width="22dp"
+            android:layout_height="23dp"
+            android:layout_marginTop="23dp"
+            android:layout_marginLeft="25dp"
+            android:src="@drawable/lupa3"/>
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="33dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginLeft="25dp"
+            android:src="@drawable/carrito2"/>
 
 
     </LinearLayout>
+
+    <LinearLayout android:id="@+id/headerDos"
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="#929292"
+        android:layout_below="@id/header"
+        android:orientation="horizontal">
+
+
+    </LinearLayout>
+    <LinearLayout android:id="@+id/HeaderTres"
+        android:layout_width="match_parent"
+        android:layout_height="28dp"
+        android:background="#FFEB3B"
+        android:layout_below="@id/headerDos">
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+
+            android:src="@drawable/loc">
+
+        </ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enviar a Alan Snyder - Las Tunas 4864              >"
+            android:textSize="15dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="43dp"
+            />
+    </LinearLayout>
+
+    <RelativeLayout android:id="@+id/img"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/HeaderTres"
+        android:background="#ffff">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/laptop" />
+        <TextView
+            android:layout_width="65dp"
+            android:layout_height="23dp"
+            android:text="  3 Fotos"
+            android:textColor="#FAF8F8"
+            android:textSize="15dp"
+            android:background="@drawable/borde"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="17dp"
+            android:layout_marginBottom="15dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/img"
+       android:background="#E9E8E8" >
+
+
+        <TextView android:id="@+id/estado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#8F8F8E"
+            android:text="Nuevo"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"/>
+        <TextView android:id="@+id/titulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Laptop Lenovo IdeaPad 400"
+            android:textSize="22dp"
+            android:layout_marginLeft="15dp"
+            android:layout_below="@id/estado"/>
+        <TextView android:id="@+id/precio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:textSize="30dp"
+            android:text="$ 21000"
+            android:layout_marginTop="2dp"
+            android:layout_below="@id/titulo"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/precio"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp">
+
+            <LinearLayout
+                android:id="@+id/tarjeta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/circulo"
+                    android:src="@drawable/card" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="2dp"
+                    android:text="Paga en hasta 12 cutoas"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_marginLeft="120dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/flecha" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tarjeta">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:text="Con tu VISA terminada en 4453" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/envio"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/tarjeta"
+                android:layout_marginTop="23dp"
+                android:layout_marginRight="15dp"
+                android:background="#D1CFCF"
+                android:orientation="horizontal" />
+
+
+            <LinearLayout
+                android:id="@+id/cantidad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/envio"
+                android:layout_marginTop="15dp">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/circulo"
+                    android:src="@drawable/truck" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="2dp"
+                    android:text="Envio gratarola                "
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_marginLeft="121dp"
+                    android:layout_marginTop="12dp"
+                    android:src="@drawable/flecha" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cantidad">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:text="Llega entre el 1 y 30 de Noviembre" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/comprar"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/cantidad"
+                android:layout_marginTop="30dp"
+
+                android:background="@drawable/bordeblanco">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+
+                    android:layout_marginTop="13dp"
+                    android:text="Cantidad:"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="13dp"
+                    android:text="1"
+                    android:textSize="18dp" />
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/flecha"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginLeft="252dp"/>
+
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/agregar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/comprar"
+                android:layout_marginTop="15dp"
+
+                android:background="#3199F7"
+                android:text="Comprar"
+                android:textColor="#ffff" />
+
+            <Button android:id="@+id/protegida"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/agregar"
+                android:layout_marginTop="10dp"
+
+                android:background="@drawable/borde_boton"
+                android:text="Agregar al carrito"
+                android:textColor="#FF3199F7" />
+
+            <LinearLayout android:id="@+id/puntos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/protegida"
+                android:layout_marginTop="15dp">
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/verifi2"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Compra protegida" />
+            </LinearLayout>
+            <LinearLayout android:id="@+id/footer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/puntos"
+                android:layout_marginTop="8dp">
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/trofeo"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Sumas 30 Mercado Puntos" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/footer"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Agregar a favoritos             Compartir"
+                    android:textColor="#FF3199F7"
+                    android:layout_marginLeft="70dp"/>
+
+
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+
+
+    </RelativeLayout>
+
 <!--
     <TextView
         android:layout_width="213dp"

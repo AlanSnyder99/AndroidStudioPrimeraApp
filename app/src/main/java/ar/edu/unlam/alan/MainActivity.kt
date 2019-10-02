@@ -10,13 +10,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //val miTexto = findViewById<Button>(R.id.MiTexto)
 
-        var contador = 0
-
-        miBoton.setOnClickListener{
-            contador++
-            miBoton.text = "Clicks: $contador"
-        }
     }
 }
