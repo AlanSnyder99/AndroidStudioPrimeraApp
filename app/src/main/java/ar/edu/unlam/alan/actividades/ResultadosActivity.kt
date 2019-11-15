@@ -40,9 +40,6 @@ class ResultadosActivity : AppCompatActivity() {
                     }
 
                 }
-
-                RecyclerView
-
             }
 
         })
