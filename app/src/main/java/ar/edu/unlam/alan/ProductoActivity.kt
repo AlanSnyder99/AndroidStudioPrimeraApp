@@ -30,7 +30,7 @@ class ProductoActivity : AppCompatActivity() {
             .load(R.drawable.truck)
             .into(camion)
 
-        API().getArticle(textoParametro, object: Callback<Articulo>){
+        API().getArticle(textoParametro.toString(), object: retrofit2.Callback<Articulo>{
 
            override fun onFailure(call: Call<Articulo>, t: Throwable) {
 //              //
@@ -44,11 +44,11 @@ class ProductoActivity : AppCompatActivity() {
                         .load(producto?.imagenesProducto?.first()?.url)
                         .into(imagenProducto)
 
-                    cantidadFotos.text = producto?.imagenesProducto?.size.ToString() + "fotos"
-                    precio.text = producto?.precioDescuento
+                    cantidadFotos.text = producto?.imagenesProducto?.size.toString() + "fotos"
+                    precio.text =  "$" + producto?.precioDescuento
                     titulo.text = producto?.titulo
 
-                    API().getVendedor(producto?.vendedorId.toString(), object:Callback<Usuario>{
+                    API().getVendedor(producto?.vendedorId.toString(), object:retrofit2.Callback<Usuario>{
                         override fun onFailure(call: Call<Usuario>, t: Throwable) {
                             TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
                         }
@@ -58,12 +58,12 @@ class ProductoActivity : AppCompatActivity() {
                                 nombreVendedor.text = usuario?.nickname
                             }
                         }
-                }
+                })
 
             }
 
         }
 
-    }
+    })
 }
 }

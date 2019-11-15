@@ -2,7 +2,7 @@ package api
 
 import modelo.Articulo
 import modelo.Usuario
-
+import modelo.SearchResult
 import com.google.gson.Gson
 import retrofit2.Callback
 import retrofit2.Retrofit
@@ -27,5 +27,8 @@ class API {
         getAPI().getVendedor(id).enqueue(callback)
     }
 
+    fun search(textoBusqueda: String, callback: Callback<SearchResult>){
+        getAPI().search(textoBusqueda).enqueue(callback)
+    }
 
 }
