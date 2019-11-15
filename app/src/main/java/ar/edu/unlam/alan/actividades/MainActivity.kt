@@ -1,9 +1,9 @@
-package ar.edu.unlam.alan
+package ar.edu.unlam.alan.actividades
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
+import ar.edu.unlam.alan.R
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
             val textoIngresado = campoDeBusqueda.text.toString()
 
             //A que vista redirijo, es un mensaje entre componentes de la app, sirve tanto para lanzar una view como para pasar parametros
-            val intent = Intent(this, ProductoActivity::class.java)
+            val intent = Intent(this, ResultadosActivity::class.java)
 
             //mando a la otra pantalla el texto ingresado
             intent.putExtra("texto",textoIngresado)

@@ -1,11 +1,9 @@
-package ar.edu.unlam.alan
+package ar.edu.unlam.alan.actividades
 
 import android.os.Bundle
-import android.graphics.Paint
 import androidx.appcompat.app.AppCompatActivity
-import api.API
-import android.view.View
-import com.squareup.picasso.Callback
+import ar.edu.unlam.alan.api.API
+import ar.edu.unlam.alan.R
 import retrofit2.Call
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_producto.*
@@ -20,7 +18,7 @@ class ProductoActivity : AppCompatActivity() {
         setContentView(R.layout.activity_producto)
 
 
-        val textoParametro = intent.extras?.getString("texto")
+        val idProducto = intent.extras?.getString("id")
 
         Picasso.get()
             .load(R.drawable.card)
@@ -30,7 +28,7 @@ class ProductoActivity : AppCompatActivity() {
             .load(R.drawable.truck)
             .into(camion)
 
-        API().getArticle(textoParametro.toString(), object: retrofit2.Callback<Articulo>{
+        API().getArticle(idProducto.toString(), object: retrofit2.Callback<Articulo>{
 
            override fun onFailure(call: Call<Articulo>, t: Throwable) {
 //              //

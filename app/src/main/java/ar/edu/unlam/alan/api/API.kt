@@ -1,4 +1,4 @@
-package api
+package ar.edu.unlam.alan.api
 
 import modelo.Articulo
 import modelo.Usuario
