@@ -12,4 +12,6 @@ data class Articulo (
     @SerializedName("price") val precioDescuento: String,
     @SerializedName("sold_quantity") val vendidos: String,
     @SerializedName("seller_id") val vendedorId: Int,
-    @SerializedName("pictures") val imagenesProducto: List<ImagenProducto>)
+    @SerializedName("pictures") val imagenesProducto: List<ImagenProducto>,
+    @SerializedName("thumbnail") val urlImagen: String,
+    @SerializedName("seller") val usuario: Usuario)
