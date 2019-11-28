@@ -1,19 +1,14 @@
 package ar.edu.unlam.alan.actividades
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
-import androidx.support.v7.widget.CardView
-import androidx.support.v7.widget.GridLayoutManager
+import androidx.recyclerview.widget.GridLayoutManager
 import ar.edu.unlam.alan.R
 import ar.edu.unlam.alan.api.API
 import kotlinx.android.synthetic.main.activity_resultados.*
-import kotlinx.android.synthetic.main.activity_producto.*
 import modelo.Articulo
 import modelo.SearchResult
 import retrofit2.Call
-import retrofit2.Callback
 import retrofit2.Response
 
 class ResultadosActivity : AppCompatActivity() {

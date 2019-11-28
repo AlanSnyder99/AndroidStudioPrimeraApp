@@ -1,22 +1,21 @@
 package ar.edu.unlam.alan.actividades
 
-import android.support.v4.content.ContextCompat.startActivity
-import androidx.support.v7.widget.RecyclerView
+
+
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.widget.Toast
-import android.support.v7.widget.CardView
-import android.support.v7.widget.GridLayoutManager
+
 import ar.edu.unlam.alan.R
 import ar.edu.unlam.alan.api.API
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
-import kotlinx.android.synthetic.main.activity_resultados.*
-import kotlinx.android.synthetic.main.activity_producto.*
+import kotlinx.android.synthetic.main.activity_item_lista.view.*
 import modelo.Articulo
-import modelo.SearchResult
 import modelo.Usuario
 import retrofit2.Call
 import retrofit2.Callback
