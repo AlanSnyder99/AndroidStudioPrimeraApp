@@ -18,7 +18,7 @@ class ProductoActivity : AppCompatActivity() {
         setContentView(R.layout.activity_producto)
 
 
-        val idProducto = intent.extras?.getString("id")
+        val idProducto = intent.extras?.getString("idProducto")
 
         Picasso.get()
             .load(R.drawable.card)
